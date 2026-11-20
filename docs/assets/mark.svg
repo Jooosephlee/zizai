@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <style>
+    .mark { color: #3C4043; }
+    @media (prefers-color-scheme: dark) { .mark { color: #D8DADF; } }
+  </style>
+  <g class="mark">
+    <path d="M4.25 8.4V5.8a1.55 1.55 0 0 1 1.55-1.55h3            m6.3 0h3.1a1.55 1.55 0 0 1 1.55 1.55v2.6            M4.25 14.8v3.4a1.55 1.55 0 0 0 1.55 1.55h2.4" fill="none" stroke="currentColor" stroke-width="1.95" stroke-linecap="round"/>
+    <path d="M11.4 11.35a.62.62 0 0 1 .96-.55l8.22 4.9a.62.62 0 0 1-.21 1.15l-3.4.59 1.59 3.02a.62.62 0 0 1-.26.84l-1.13.59a.62.62 0 0 1-.84-.26l-1.59-3.02-2.45 2.27a.62.62 0 0 1-1.04-.47Z" fill="currentColor"/>
+  </g>
+</svg>

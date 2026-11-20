@@ -1,0 +1,451 @@
+{
+  "extensionName": {
+    "message": "自在浏览"
+  },
+  "extensionDescription": {
+    "message": "鼠标停在网页图片上，大图直接铺开，作者和正文就在旁边。免费开源，不向我们发送任何数据。"
+  },
+  "previewSettings": {
+    "message": "图片预览"
+  },
+  "enabledLabel": {
+    "message": "启用自在浏览"
+  },
+  "triggerLabel": {
+    "message": "触发方式"
+  },
+  "triggerAuto": {
+    "message": "自动"
+  },
+  "triggerHold": {
+    "message": "按键触发"
+  },
+  "delayLabel": {
+    "message": "停留多久打开"
+  },
+  "modeLabel": {
+    "message": "默认放大模式"
+  },
+  "modeFloat": {
+    "message": "悬浮放大"
+  },
+  "modeFull": {
+    "message": "全页看图"
+  },
+  "sitesLabel": {
+    "message": "启用的网站"
+  },
+  "sitesHint": {
+    "message": "只在这些网站上看图，每行一个域名，子域名自动包含。要在别的网站上用，打开那个网站，点工具栏上的自在浏览，打开「启用看图」。"
+  },
+  "sitesInvalid": {
+    "message": "有一个域名格式不对，请检查后重试。"
+  },
+  "shortcutsLabel": {
+    "message": "快捷键"
+  },
+  "holdToSuppress": {
+    "message": "按住暂停预览"
+  },
+  "holdToTrigger": {
+    "message": "按住触发预览"
+  },
+  "toggleSite": {
+    "message": "切换当前网站"
+  },
+  "prevImage": {
+    "message": "上一张"
+  },
+  "nextImage": {
+    "message": "下一张"
+  },
+  "toggleMode": {
+    "message": "切换浮窗和全屏"
+  },
+  "openOriginal": {
+    "message": "打开原图"
+  },
+  "copyImage": {
+    "message": "复制图片"
+  },
+  "closePreview": {
+    "message": "关闭预览"
+  },
+  "helpTitle": {
+    "message": "自在浏览快捷键"
+  },
+  "resetAll": {
+    "message": "恢复全部默认快捷键"
+  },
+  "resetBinding": {
+    "message": "恢复"
+  },
+  "resetNamed": {
+    "message": "恢复「$VALUE$」默认键",
+    "placeholders": {
+      "value": {
+        "content": "$1"
+      }
+    }
+  },
+  "recordModifier": {
+    "message": "按下一个修饰键"
+  },
+  "recordKey": {
+    "message": "按下快捷键"
+  },
+  "spaceKey": {
+    "message": "空格"
+  },
+  "shortcutInvalid": {
+    "message": "这个按键不能用，请换一个。"
+  },
+  "shortcutHoldOnly": {
+    "message": "请单独按 Shift、Alt、Ctrl 或 ⌘。"
+  },
+  "shortcutNeedsModifier": {
+    "message": "全局快捷键需要加 Alt、Ctrl 或 ⌘。"
+  },
+  "shortcutReserved": {
+    "message": "$VALUE$ 已被浏览器或系统占用。",
+    "placeholders": {
+      "value": {
+        "content": "$1"
+      }
+    }
+  },
+  "shortcutConflict": {
+    "message": "这个快捷键已用于「$VALUE$」。",
+    "placeholders": {
+      "value": {
+        "content": "$1"
+      }
+    }
+  },
+  "settingsSaved": {
+    "message": "已保存"
+  },
+  "settingsError": {
+    "message": "设置读写失败，请重新打开设置试试。"
+  },
+  "firstHint": {
+    "message": "按 ? 查看自在浏览快捷键"
+  },
+  "copyProgress": {
+    "message": "正在复制图片…"
+  },
+  "copySuccess": {
+    "message": "已复制图片"
+  },
+  "copyGif": {
+    "message": "已复制为静态图片，GIF 动画不会保留。"
+  },
+  "copyFailure": {
+    "message": "这张图片复制失败，可能受网站限制。"
+  },
+  "copyUnavailable": {
+    "message": "这个页面无法使用图片剪贴板。"
+  },
+  "feedbackPending": {
+    "message": "反馈入口将在发布后开放"
+  },
+  "usageGuide": {
+    "message": "使用说明"
+  },
+  "currentSiteHeading": {
+    "message": "本网站"
+  },
+  "siteEnabledLabel": {
+    "message": "启用看图"
+  },
+  "enabledHint": {
+    "message": "控制所有网站上的看图功能"
+  },
+  "unsupportedPage": {
+    "message": "这个页面无法预览图片"
+  },
+  "showCaptionLabel": {
+    "message": "显示正文卡片"
+  },
+  "showCaptionHint": {
+    "message": "看大图时，在旁边显示帖子的作者和正文"
+  },
+  "shortcutInstructions": {
+    "message": "点按键框后按新组合键，Esc 取消。输入框里打字和选中文字复制时不会触发。"
+  },
+  "postCaption": {
+    "message": "帖子正文"
+  },
+  "openPost": {
+    "message": "打开原帖 ↗"
+  },
+  "showHelp": {
+    "message": "查看快捷键"
+  },
+  "guideTitle": {
+    "message": "欢迎使用自在浏览"
+  },
+  "guideDemoLabel": {
+    "message": "交互演示"
+  },
+  "guideHoverImage": {
+    "message": "把鼠标停在这张图上"
+  },
+  "guideFictional": {
+    "message": "一个示例网页"
+  },
+  "demoAuthor": {
+    "message": "阿岚"
+  },
+  "demoTime": {
+    "message": "刚刚"
+  },
+  "demoBody": {
+    "message": "今天绕远了一点，反而遇见了这片湖。山和云都慢下来，才发现原来没有白走的路。"
+  },
+  "guideSwitchMode": {
+    "message": "切换看图方式"
+  },
+  "guideProgress": {
+    "message": "引导进度"
+  },
+  "guideBack": {
+    "message": "上一步"
+  },
+  "guideNext": {
+    "message": "继续"
+  },
+  "guideDone": {
+    "message": "去网页试试"
+  },
+  "guidePrivacy": {
+    "message": "不用账号，不向我们发送任何数据。设置只存在这台电脑上。"
+  },
+  "guideStep": {
+    "message": "第 $ONE$ 步，共 $TWO$ 步",
+    "placeholders": {
+      "one": {
+        "content": "$1"
+      },
+      "two": {
+        "content": "$2"
+      }
+    }
+  },
+  "guideStartTitle": {
+    "message": "鼠标一停，\n大图就来。"
+  },
+  "guideStartBody": {
+    "message": "把鼠标停在左边的图上。不用点，大图直接铺开，作者和正文就在旁边。"
+  },
+  "guideFullTitle": {
+    "message": "滚一下，\n换下一张。"
+  },
+  "guideFullBody": {
+    "message": "在大图上滚一下，就换下一张。滚轮、触控板、← → 键都可以。"
+  },
+  "guideCopyTitle": {
+    "message": "来去自在。"
+  },
+  "guideCopyBody": {
+    "message": "点一下图片，或者旁边的空白处，就关了。"
+  },
+  "guideReadyTitle": {
+    "message": "想在哪个网站用，\n你来定。"
+  },
+  "guideReadyBody": {
+    "message": "微博、即刻、X、Instagram 这些网站已经开好。别的网站照左边三步打开，回到网页刷新一下就能用。"
+  },
+  "previewThumbnailFallback": {
+    "message": "原图暂时无法加载，当前显示缩略图。"
+  },
+  "previewUnavailable": {
+    "message": "这张图片暂时打不开，可以稍后再试。"
+  },
+  "resetSites": {
+    "message": "恢复默认网站"
+  },
+  "siteTurnedOn": {
+    "message": "已在 $HOST$ 开启看图",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "siteTurnedOff": {
+    "message": "已在 $HOST$ 关闭看图",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "readFullPost": {
+    "message": "按 $KEY$ 全页阅读全文",
+    "placeholders": {
+      "key": {
+        "content": "$1"
+      }
+    }
+  },
+  "captionTruncated": {
+    "message": "网页上只显示了前一部分，全文请打开原帖。"
+  },
+  "viewerThemeLabel": {
+    "message": "看图背景"
+  },
+  "themeDark": {
+    "message": "深色"
+  },
+  "themeLight": {
+    "message": "浅色"
+  },
+  "themeSystem": {
+    "message": "跟随系统"
+  },
+  "playPause": {
+    "message": "播放 / 暂停视频"
+  },
+  "toggleMute": {
+    "message": "视频声音开关"
+  },
+  "videoSoundHint": {
+    "message": "按 $KEY$ 开声音",
+    "placeholders": {
+      "key": {
+        "content": "$1"
+      }
+    }
+  },
+  "videoMuted": {
+    "message": "已静音"
+  },
+  "videoUnmuted": {
+    "message": "已打开声音"
+  },
+  "videoUnavailable": {
+    "message": "这个视频没法在这里播放，请打开原帖观看。"
+  },
+  "videoNoAudio": {
+    "message": "这个视频没有声音"
+  },
+  "videoVolume": {
+    "message": "音量"
+  },
+  "videoAutoMuted": {
+    "message": "浏览器没让带声音播放，已静音播放；按 $KEY$ 开声音",
+    "placeholders": {
+      "key": {
+        "content": "$1"
+      }
+    }
+  },
+  "prevImageLabel": {
+    "message": "上一张"
+  },
+  "nextImageLabel": {
+    "message": "下一张"
+  },
+  "saveImage": {
+    "message": "保存图片"
+  },
+  "copyText": {
+    "message": "复制文字"
+  },
+  "saveProgress": {
+    "message": "正在保存图片…"
+  },
+  "saveSuccess": {
+    "message": "已保存为 $NAME$",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      }
+    }
+  },
+  "saveFailure": {
+    "message": "这张图片保存失败，可能受网站限制。"
+  },
+  "copyTextSuccess": {
+    "message": "已复制正文（带作者和原帖链接）"
+  },
+  "videoMirrored": {
+    "message": "这个视频只能沿用网页播放器的画面，清晰度由网站决定。"
+  },
+  "moreSettings": {
+    "message": "更多设置"
+  },
+  "delayFast": {
+    "message": "快"
+  },
+  "delayMedium": {
+    "message": "中"
+  },
+  "delaySlow": {
+    "message": "慢"
+  },
+  "sitePermissionDenied": {
+    "message": "没有允许访问这个网站，所以这里没有开启看图。"
+  },
+  "sitesNeedPermission": {
+    "message": "新加的网站需要你允许访问，没有保存。也可以打开那个网站，在这里打开「启用看图」。"
+  },
+  "guideWheel": {
+    "message": "滚轮"
+  },
+  "guidePad": {
+    "message": "触控板"
+  },
+  "guideSite1": {
+    "message": "点工具栏上的自在浏览。没看到的话，先点拼图图标，把它固定出来。"
+  },
+  "guideSite2": {
+    "message": "在弹出的设置里，打开「启用看图」。"
+  },
+  "guideSite3": {
+    "message": "Chrome 问你是否允许时，点「允许」。每个网站只问一次。"
+  },
+  "guideSitePrompt": {
+    "message": "允许自在浏览访问 example.com 吗？"
+  },
+  "guideAllow": {
+    "message": "允许"
+  },
+  "guideAlsoVideoLabel": {
+    "message": "看视频时"
+  },
+  "guideAlsoVideo": {
+    "message": "点画面是暂停，点视频外面才关"
+  },
+  "guideAlsoMoreLabel": {
+    "message": "也可以"
+  },
+  "guideAlsoMore": {
+    "message": "点左上角的小红点，或按 Esc"
+  },
+  "guideTryHover": {
+    "message": "把鼠标停在这里"
+  },
+  "guideTryScroll": {
+    "message": "在这里滚一下"
+  },
+  "guideTryClose": {
+    "message": "点这里关掉"
+  },
+  "guideDoneOpen": {
+    "message": "✓ 打开了。点「继续」"
+  },
+  "guideDoneFlip": {
+    "message": "✓ 换好了。点「继续」"
+  },
+  "guideDoneClose": {
+    "message": "✓ 关掉了。鼠标移开再停回来，又能打开"
+  },
+  "guideSkip": {
+    "message": "跳过"
+  },
+  "guideReplay": {
+    "message": "再看一遍"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "manifest_version": 3,
+  "name": "__MSG_extensionName__",
+  "description": "__MSG_extensionDescription__",
+  "version": "1.1.0",
+  "version_name": "1.1.0",
+  "default_locale": "zh_CN",
+  "minimum_chrome_version": "123",
+  "permissions": [
+    "storage",
+    "scripting",
+    "activeTab",
+    "declarativeNetRequestWithHostAccess"
+  ],
+  "host_permissions": [
+    "*://*.weibo.com/*",
+    "*://*.weibo.cn/*",
+    "*://*.okjike.com/*",
+    "*://*.x.com/*",
+    "*://*.twitter.com/*",
+    "*://*.xiaohongshu.com/*",
+    "*://*.rednote.com/*",
+    "*://*.instagram.com/*",
+    "*://*.pinterest.com/*",
+    "*://*.douban.com/*",
+    "*://*.bilibili.com/*",
+    "*://*.zcool.com.cn/*",
+    "*://*.sinaimg.cn/*",
+    "*://*.twimg.com/*",
+    "*://*.cdninstagram.com/*",
+    "*://*.fbcdn.net/*",
+    "*://*.pinimg.com/*",
+    "*://*.doubanio.com/*",
+    "*://*.hdslb.com/*",
+    "*://*.zcool.cn/*",
+    "*://*.xhscdn.com/*",
+    "*://*.ruguoapp.com/*",
+    "*://*.jellow.club/*"
+  ],
+  "optional_host_permissions": [
+    "*://*/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icons/toolbar-16.png",
+      "24": "icons/toolbar-24.png",
+      "32": "icons/toolbar-32.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icons/16.png",
+    "32": "icons/32.png",
+    "48": "icons/48.png",
+    "96": "icons/96.png",
+    "128": "icons/128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.weibo.com/*",
+        "*://*.weibo.cn/*",
+        "*://*.okjike.com/*",
+        "*://*.x.com/*",
+        "*://*.twitter.com/*",
+        "*://*.xiaohongshu.com/*",
+        "*://*.rednote.com/*",
+        "*://*.instagram.com/*",
+        "*://*.pinterest.com/*",
+        "*://*.douban.com/*",
+        "*://*.bilibili.com/*",
+        "*://*.zcool.com.cn/*"
+      ],
+      "all_frames": true,
+      "js": [
+        "shortcut-keys.js",
+        "settings.js",
+        "bootstrap.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
