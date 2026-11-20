@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="welcome.css">
+  <script src="shortcut-keys.js" defer></script>
+  <script src="settings.js" defer></script>
+  <script src="welcome.js" defer></script>
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <img src="icons/mark.svg" width="28" height="28" alt="">
+      <span data-message="extensionName"></span>
+    </div>
+    <div class="top-right"><span id="version"></span><button type="button" class="skip" id="skip" data-message="guideSkip"></button></div>
+  </header>
+  <main>
+    <!-- Left: what it looks like. Each step plays once, then points at where to try. -->
+    <div class="stage">
+      <div class="demo" id="demo" data-message-aria="guideDemoLabel">
+        <div class="browser-bar"><span class="dots"><i></i><i></i><i></i></span><span class="address" data-message="guideFictional"></span></div>
+        <div class="demo-page" id="demoPage">
+          <article class="sample-post">
+            <header><span class="avatar">岚</span><div><strong data-message="demoAuthor"></strong><small data-message="demoTime"></small></div></header>
+            <p data-message="demoBody"></p>
+            <div class="thumbs">
+              <button type="button" class="sample-image" id="sampleImage" data-message-aria="guideHoverImage"><img src="demo-landscape.svg" alt=""></button>
+              <button type="button" class="sample-image second" tabindex="-1" aria-hidden="true"><img src="demo-evening.svg" alt=""></button>
+            </div>
+          </article>
+          <div class="demo-view" id="demoView" hidden>
+            <div class="panel" id="panel">
+              <div class="demo-picture" id="demoPicture">
+                <img id="demoImage" src="demo-landscape.svg" alt="">
+                <button type="button" class="red-dot" id="redDot" data-message-aria="closePreview"><i><svg viewBox="0 0 24 24"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg></i></button>
+                <div class="strip" id="strip"><img src="demo-landscape.svg" alt=""><img src="demo-evening.svg" alt=""><span id="demoCount">1 / 2</span></div>
+              </div>
+              <aside class="demo-caption" id="demoCaption">
+                <header><span class="avatar">岚</span><div><strong data-message="demoAuthor"></strong><small data-message="demoTime"></small></div></header>
+                <p data-message="demoBody"></p>
+              </aside>
+            </div>
+          </div>
+          <!-- Where to try: a pulsing ring on the exact spot, with a label -->
+          <div class="target" id="target" hidden><span class="ring"></span><span class="label" id="targetLabel"></span></div>
+          <svg class="cursor" id="cursor" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3l14 8.2-6.2 1.3-3.4 5.7z" fill="#1d1d1f" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          <span class="tap" id="tap" aria-hidden="true"></span>
+          <span class="wheel-tick" id="wheelTick" aria-hidden="true"></span>
+        </div>
+      </div>
+
+      <!-- Step 4: where the switch is -->
+      <div class="sites" id="sites" hidden>
+        <div class="site-step" id="site1">
+          <span class="num">1</span>
+          <div class="toolbar"><span class="addr">example.com</span><span class="tb puzzle"><svg viewBox="0 0 24 24"><path d="M10 4a2 2 0 1 1 4 0v1h4v4h-1a2 2 0 1 0 0 4h1v5h-5v-1a2 2 0 1 0-4 0v1H5v-5h1a2 2 0 1 0 0-4H5V5h5z"/></svg></span><span class="tb ours"><img src="icons/mark.svg" alt=""></span></div>
+          <p data-message="guideSite1"></p>
+        </div>
+        <div class="site-step" id="site2">
+          <span class="num">2</span>
+          <div class="popup"><span><strong data-message="siteEnabledLabel"></strong><small>example.com</small></span><i class="switch"></i></div>
+          <p data-message="guideSite2"></p>
+        </div>
+        <div class="site-step" id="site3">
+          <span class="num">3</span>
+          <div class="prompt"><p data-message="guideSitePrompt"></p><span class="allow" data-message="guideAllow"></span></div>
+          <p data-message="guideSite3"></p>
+        </div>
+      </div>
+      <button type="button" class="replay" id="replay"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 12a7.5 7.5 0 1 0 2.2-5.3"/><path d="M4.5 4.5v4h4"/></svg><span data-message="guideReplay"></span></button>
+    </div>
+
+    <!-- Right: what to do -->
+    <div class="copy">
+      <p class="eyebrow" id="stepLabel"></p>
+      <h1 id="headline" tabindex="-1"></h1>
+      <p class="description" id="description"></p>
+      <ul class="also" id="also" hidden></ul>
+      <!-- Step 2: the three ways to turn the page light up as they are used -->
+      <div class="ways" id="ways" hidden>
+        <span id="wayWheel"><svg viewBox="0 0 24 24"><rect x="7" y="3" width="10" height="18" rx="5"/><path d="M12 7v3"/></svg><b data-message="guideWheel"></b></span>
+        <span id="wayPad"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2.5"/><path d="M9 12h6"/></svg><b data-message="guidePad"></b></span>
+        <span id="wayKeys"><kbd>←</kbd><kbd>→</kbd></span>
+      </div>
+      <p class="status" id="status" role="status"></p>
+      <div class="actions"><button class="primary" id="next"></button><button class="secondary" id="back" data-message="guideBack"></button></div>
+      <p class="privacy-note" data-message="guidePrivacy"></p>
+    </div>
+  </main>
+  <footer><nav id="progress" data-message-aria="guideProgress"></nav><span id="counter"></span></footer>
+</body>
+</html>

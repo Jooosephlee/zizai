@@ -1,0 +1,451 @@
+{
+  "extensionName": {
+    "message": "Zizai"
+  },
+  "extensionDescription": {
+    "message": "Rest your mouse on a picture: it fills the screen, with the post right beside it. Free and open source. Nothing is sent to us."
+  },
+  "previewSettings": {
+    "message": "Image preview"
+  },
+  "enabledLabel": {
+    "message": "Enable Zizai"
+  },
+  "triggerLabel": {
+    "message": "Trigger"
+  },
+  "triggerAuto": {
+    "message": "Automatic"
+  },
+  "triggerHold": {
+    "message": "Hold a key"
+  },
+  "delayLabel": {
+    "message": "Open after resting"
+  },
+  "modeLabel": {
+    "message": "Default view"
+  },
+  "modeFloat": {
+    "message": "Floating preview"
+  },
+  "modeFull": {
+    "message": "Full-window preview"
+  },
+  "sitesLabel": {
+    "message": "Enabled sites"
+  },
+  "sitesHint": {
+    "message": "Previews only run on these sites. One domain per line; subdomains are included. To use it on another site, open that site, click Zizai in the toolbar and turn it on."
+  },
+  "sitesInvalid": {
+    "message": "Check the list for an invalid hostname."
+  },
+  "shortcutsLabel": {
+    "message": "Shortcuts"
+  },
+  "holdToSuppress": {
+    "message": "Hold to pause"
+  },
+  "holdToTrigger": {
+    "message": "Hold to trigger"
+  },
+  "toggleSite": {
+    "message": "Toggle current site"
+  },
+  "prevImage": {
+    "message": "Previous image"
+  },
+  "nextImage": {
+    "message": "Next image"
+  },
+  "toggleMode": {
+    "message": "Switch preview mode"
+  },
+  "openOriginal": {
+    "message": "Open image"
+  },
+  "copyImage": {
+    "message": "Copy image"
+  },
+  "closePreview": {
+    "message": "Close preview"
+  },
+  "helpTitle": {
+    "message": "Zizai shortcuts"
+  },
+  "resetAll": {
+    "message": "Reset all shortcuts"
+  },
+  "resetBinding": {
+    "message": "Reset"
+  },
+  "resetNamed": {
+    "message": "Reset $VALUE$ to default",
+    "placeholders": {
+      "value": {
+        "content": "$1"
+      }
+    }
+  },
+  "recordModifier": {
+    "message": "Press a modifier"
+  },
+  "recordKey": {
+    "message": "Press a shortcut"
+  },
+  "spaceKey": {
+    "message": "Space"
+  },
+  "shortcutInvalid": {
+    "message": "Choose a different key."
+  },
+  "shortcutHoldOnly": {
+    "message": "Press Shift, Alt, Ctrl, or the system key by itself."
+  },
+  "shortcutNeedsModifier": {
+    "message": "Add Alt, Ctrl, or Command to the site shortcut."
+  },
+  "shortcutReserved": {
+    "message": "$VALUE$ is reserved by the browser or system.",
+    "placeholders": {
+      "value": {
+        "content": "$1"
+      }
+    }
+  },
+  "shortcutConflict": {
+    "message": "That shortcut is already used for $VALUE$.",
+    "placeholders": {
+      "value": {
+        "content": "$1"
+      }
+    }
+  },
+  "settingsSaved": {
+    "message": "Saved"
+  },
+  "settingsError": {
+    "message": "Settings are unavailable. Reopen the popup and try again."
+  },
+  "firstHint": {
+    "message": "Press ? to see Zizai shortcuts"
+  },
+  "copyProgress": {
+    "message": "Copying image…"
+  },
+  "copySuccess": {
+    "message": "Image copied"
+  },
+  "copyGif": {
+    "message": "Copied as a still image. GIF animation is not preserved."
+  },
+  "copyFailure": {
+    "message": "Could not copy this image. The site may restrict access."
+  },
+  "copyUnavailable": {
+    "message": "The image clipboard is unavailable on this page."
+  },
+  "feedbackPending": {
+    "message": "Feedback links will be added at release."
+  },
+  "usageGuide": {
+    "message": "User guide"
+  },
+  "currentSiteHeading": {
+    "message": "THIS SITE"
+  },
+  "siteEnabledLabel": {
+    "message": "Enable image preview"
+  },
+  "enabledHint": {
+    "message": "Enable or pause previews across all sites"
+  },
+  "unsupportedPage": {
+    "message": "Previews are unavailable on this page"
+  },
+  "showCaptionLabel": {
+    "message": "Show post card"
+  },
+  "showCaptionHint": {
+    "message": "Show the author and post text next to the image"
+  },
+  "shortcutInstructions": {
+    "message": "Click a key field and press a new shortcut. Esc cancels. Typing and copying selected text stay with the page."
+  },
+  "postCaption": {
+    "message": "Post text"
+  },
+  "openPost": {
+    "message": "Open post ↗"
+  },
+  "showHelp": {
+    "message": "Show shortcuts"
+  },
+  "guideTitle": {
+    "message": "Welcome to Zizai"
+  },
+  "guideDemoLabel": {
+    "message": "Interactive demo"
+  },
+  "guideHoverImage": {
+    "message": "Rest your mouse on this picture"
+  },
+  "guideFictional": {
+    "message": "An example page"
+  },
+  "demoAuthor": {
+    "message": "Ari"
+  },
+  "demoTime": {
+    "message": "Just now"
+  },
+  "demoBody": {
+    "message": "I took the long way home and found this lake. The mountains and clouds slowed down. Some detours are worth taking."
+  },
+  "guideSwitchMode": {
+    "message": "Switch preview mode"
+  },
+  "guideProgress": {
+    "message": "Guide progress"
+  },
+  "guideBack": {
+    "message": "Back"
+  },
+  "guideNext": {
+    "message": "Continue"
+  },
+  "guideDone": {
+    "message": "Try it on a page"
+  },
+  "guidePrivacy": {
+    "message": "No account. Nothing is sent to us. Settings stay on this computer."
+  },
+  "guideStep": {
+    "message": "Step $ONE$ of $TWO$",
+    "placeholders": {
+      "one": {
+        "content": "$1"
+      },
+      "two": {
+        "content": "$2"
+      }
+    }
+  },
+  "guideStartTitle": {
+    "message": "Just pause.\nIt comes to you."
+  },
+  "guideStartBody": {
+    "message": "Rest your mouse on the picture on the left. No clicking: it fills the view, with the author and post right beside it."
+  },
+  "guideFullTitle": {
+    "message": "Scroll to\nthe next one."
+  },
+  "guideFullBody": {
+    "message": "Scroll on the big picture to see the next one. Wheel, trackpad or ← → keys all work."
+  },
+  "guideCopyTitle": {
+    "message": "Easy in,\neasy out."
+  },
+  "guideCopyBody": {
+    "message": "Click the picture, or the space around it, to close."
+  },
+  "guideReadyTitle": {
+    "message": "You choose\nwhere it runs."
+  },
+  "guideReadyBody": {
+    "message": "Weibo, Jike, X, Instagram and a few more are ready. For any other site, follow the three steps on the left, then refresh the page."
+  },
+  "previewThumbnailFallback": {
+    "message": "The full image is unavailable. Showing the thumbnail."
+  },
+  "previewUnavailable": {
+    "message": "This image can’t be opened right now. Try again later."
+  },
+  "resetSites": {
+    "message": "Restore default sites"
+  },
+  "siteTurnedOn": {
+    "message": "Image preview is on for $HOST$",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "siteTurnedOff": {
+    "message": "Image preview is off for $HOST$",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "readFullPost": {
+    "message": "Press $KEY$ to read the full post",
+    "placeholders": {
+      "key": {
+        "content": "$1"
+      }
+    }
+  },
+  "captionTruncated": {
+    "message": "The page shows only part of this post. Open the post to read it all."
+  },
+  "viewerThemeLabel": {
+    "message": "Viewer background"
+  },
+  "themeDark": {
+    "message": "Dark"
+  },
+  "themeLight": {
+    "message": "Light"
+  },
+  "themeSystem": {
+    "message": "System"
+  },
+  "playPause": {
+    "message": "Play / pause video"
+  },
+  "toggleMute": {
+    "message": "Video sound on / off"
+  },
+  "videoSoundHint": {
+    "message": "Press $KEY$ for sound",
+    "placeholders": {
+      "key": {
+        "content": "$1"
+      }
+    }
+  },
+  "videoMuted": {
+    "message": "Muted"
+  },
+  "videoUnmuted": {
+    "message": "Sound on"
+  },
+  "videoUnavailable": {
+    "message": "This video can't play here. Open the post to watch it."
+  },
+  "videoNoAudio": {
+    "message": "This video has no sound"
+  },
+  "videoVolume": {
+    "message": "Volume"
+  },
+  "videoAutoMuted": {
+    "message": "The browser blocked sound, so it's playing muted. Press $KEY$ for sound.",
+    "placeholders": {
+      "key": {
+        "content": "$1"
+      }
+    }
+  },
+  "prevImageLabel": {
+    "message": "Previous"
+  },
+  "nextImageLabel": {
+    "message": "Next"
+  },
+  "saveImage": {
+    "message": "Save image"
+  },
+  "copyText": {
+    "message": "Copy text"
+  },
+  "saveProgress": {
+    "message": "Saving image…"
+  },
+  "saveSuccess": {
+    "message": "Saved as $NAME$",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      }
+    }
+  },
+  "saveFailure": {
+    "message": "Couldn't save this image; the site may block it."
+  },
+  "copyTextSuccess": {
+    "message": "Copied the post text (with author and link)"
+  },
+  "videoMirrored": {
+    "message": "This video can only reuse the page player's picture, so the site decides its quality."
+  },
+  "moreSettings": {
+    "message": "More settings"
+  },
+  "delayFast": {
+    "message": "Quick"
+  },
+  "delayMedium": {
+    "message": "Medium"
+  },
+  "delaySlow": {
+    "message": "Slow"
+  },
+  "sitePermissionDenied": {
+    "message": "Access to this site wasn't allowed, so previews stay off here."
+  },
+  "sitesNeedPermission": {
+    "message": "New sites need your OK to access them, so they weren't saved. You can also open the site and turn it on here."
+  },
+  "guideWheel": {
+    "message": "Wheel"
+  },
+  "guidePad": {
+    "message": "Trackpad"
+  },
+  "guideSite1": {
+    "message": "Click Zizai in the toolbar. Not there? Pin it from the puzzle icon first."
+  },
+  "guideSite2": {
+    "message": "In its settings, turn on \"Enable image preview\"."
+  },
+  "guideSite3": {
+    "message": "When Chrome asks, click Allow. Each site asks only once."
+  },
+  "guideSitePrompt": {
+    "message": "Allow Zizai to access example.com?"
+  },
+  "guideAllow": {
+    "message": "Allow"
+  },
+  "guideAlsoVideoLabel": {
+    "message": "On a video"
+  },
+  "guideAlsoVideo": {
+    "message": "a click pauses; click outside it to close"
+  },
+  "guideAlsoMoreLabel": {
+    "message": "Or"
+  },
+  "guideAlsoMore": {
+    "message": "click the red dot in the corner, or press Esc"
+  },
+  "guideTryHover": {
+    "message": "Rest your mouse here"
+  },
+  "guideTryScroll": {
+    "message": "Scroll here"
+  },
+  "guideTryClose": {
+    "message": "Click here to close"
+  },
+  "guideDoneOpen": {
+    "message": "✓ Open. Click Continue"
+  },
+  "guideDoneFlip": {
+    "message": "✓ Next one. Click Continue"
+  },
+  "guideDoneClose": {
+    "message": "✓ Closed. Move away and back to open it again"
+  },
+  "guideSkip": {
+    "message": "Skip"
+  },
+  "guideReplay": {
+    "message": "Show me again"
+  }
+}

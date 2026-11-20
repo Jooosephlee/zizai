@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="popup.css">
+  <script src="shortcut-keys.js" defer></script>
+  <script src="settings.js" defer></script>
+  <script src="popup.js" defer></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="brand-row">
+      <div class="brand">
+        <img src="icons/mark.svg" width="28" height="28" alt="">
+        <div><h1 data-message="extensionName"></h1><small id="version"></small></div>
+      </div>
+      <a class="ghost-link" href="welcome.html" target="_blank" rel="noopener" data-message="usageGuide"></a>
+    </header>
+    <div class="set-list global-switch">
+      <label class="set-switch">
+        <span><strong data-message="enabledLabel"></strong><small data-message="enabledHint"></small></span>
+        <input id="enabled" type="checkbox" role="switch">
+      </label>
+    </div>
+    <section class="set-section">
+      <h2 data-message="currentSiteHeading"></h2>
+      <div class="set-list">
+        <label class="set-switch">
+          <span><strong data-message="siteEnabledLabel"></strong><small id="currentSite"></small></span>
+          <input id="siteEnabled" type="checkbox" role="switch">
+        </label>
+      </div>
+    </section>
+    <section class="set-section">
+      <h2 data-message="previewSettings"></h2>
+      <div class="seg" role="group" data-message-aria="modeLabel">
+        <button type="button" data-setting="mode" data-value="float" data-message="modeFloat"></button>
+        <button type="button" data-setting="mode" data-value="full" data-message="modeFull"></button>
+      </div>
+      <div class="set-list">
+        <div class="stack">
+          <strong data-message="viewerThemeLabel"></strong>
+          <div class="seg three" role="group" data-message-aria="viewerThemeLabel">
+            <button type="button" data-setting="viewerTheme" data-value="dark" data-message="themeDark"></button>
+            <button type="button" data-setting="viewerTheme" data-value="light" data-message="themeLight"></button>
+            <button type="button" data-setting="viewerTheme" data-value="system" data-message="themeSystem"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <details class="set-section more">
+      <summary data-message="moreSettings"></summary>
+      <div class="set-list">
+        <label class="set-switch">
+          <span><strong data-message="showCaptionLabel"></strong><small data-message="showCaptionHint"></small></span>
+          <input id="showCaption" type="checkbox" role="switch">
+        </label>
+        <label class="row"><strong data-message="triggerLabel"></strong><select id="trigger">
+          <option value="auto" data-message="triggerAuto"></option><option value="hold" data-message="triggerHold"></option>
+        </select></label>
+        <div class="stack">
+          <strong data-message="delayLabel"></strong>
+          <div class="seg three" role="group" data-message-aria="delayLabel">
+            <button type="button" data-setting="delay" data-value="150" data-message="delayFast"></button>
+            <button type="button" data-setting="delay" data-value="320" data-message="delayMedium"></button>
+            <button type="button" data-setting="delay" data-value="600" data-message="delaySlow"></button>
+          </div>
+        </div>
+      </div>
+      <details class="set-sub">
+        <summary data-message="shortcutsLabel"></summary>
+        <div class="set-list" id="shortcuts"></div>
+        <p class="set-hint" data-message="shortcutInstructions"></p>
+        <button class="ghost-link" type="button" id="resetAll" data-message="resetAll"></button>
+      </details>
+      <details class="set-sub">
+        <summary data-message="sitesLabel"></summary>
+        <label class="sr-only" for="sites" data-message="sitesLabel"></label>
+        <textarea id="sites" rows="8" spellcheck="false" aria-describedby="sitesHint"></textarea>
+        <p class="set-hint" id="sitesHint" data-message="sitesHint"></p>
+        <button class="ghost-link" type="button" id="resetSites" data-message="resetSites"></button>
+      </details>
+    </details>
+    <p id="status" role="status"></p>
+  </main>
+</body>
+</html>
