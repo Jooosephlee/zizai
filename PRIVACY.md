@@ -33,7 +33,9 @@
 
 ### 不做的事
 
-没有账号，没有统计，没有广告。不出售、不转让任何数据，也不把数据用在看图以外的地方。
+没有账号，没有统计，没有广告。不出售数据，也不把数据用在看图以外的地方。
+
+本插件对用户数据的使用符合 Chrome 应用商店用户数据政策中的 Limited Use 要求：这些数据只用于在你开启的网站上放大图片和显示帖子；不出售；不用于广告、信用评估或放贷；开发者不接收这些数据。为显示图片而向图床请求文件，以及为显示微博长文而向微博请求全文，是这个用途所必需的。政策原文：https://developer.chrome.com/docs/webstore/program-policies/limited-use
 
 ### 网站权限
 
@@ -72,7 +74,9 @@ The extension never reads or exports your cookies or sign-in details.
 
 ### What it never does
 
-No account, no analytics, no ads. It does not sell or transfer any data, or use it for anything other than viewing pictures.
+No account, no analytics, no ads. It does not sell data, or use it for anything other than viewing pictures.
+
+This extension's use of user data complies with the Limited Use requirements in the Chrome Web Store User Data Policy. That data is used only to enlarge pictures and show posts on sites you turn on. It is not sold, it is not used for advertising, credit assessment, or lending, and the developer does not receive it. Requesting a file from an image host in order to show the picture, and requesting a long Weibo post's full text from Weibo, are necessary for that use. Policy text: https://developer.chrome.com/docs/webstore/program-policies/limited-use
 
 ### Site access
 

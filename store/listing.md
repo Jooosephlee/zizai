@@ -86,7 +86,7 @@ Site names belong to their owners. Zizai is an independent open-source project a
 
 ### 其他栏
 
-- **Official URL / Homepage URL**：`https://jooosephlee.github.io/zizai/`。仓库已经公开，但 GitHub Pages 还没打开。提交前先在仓库 Settings → Pages 选 Deploy from a branch、分支 `main`、文件夹 `/docs`，并确认这个地址能打开。不要填一个打不开的地址，也不要填商店商品页。
+- **Official URL / Homepage URL**：`https://jooosephlee.github.io/zizai/`。2026-11-20 实测 HTTP 200。不要填商店商品页。
 - **Support URL**：`https://github.com/Jooosephlee/zizai/issues`。没有联系邮箱，不要另填一个编出来的地址。
 - **Mature content**：否。
 
@@ -119,25 +119,28 @@ Viewing pictures on sites the user turns on: when the mouse rests on a picture o
 
 **Remote code（远程代码）**：选「No, I am not using remote code」。所有脚本都在扩展包里。
 
-**Data usage（数据使用）**：按 Chrome 的规定，只在本机处理的数据也要申报。勾选：
+**Data usage（数据使用）**：只在本机处理的数据也要申报。勾选：
 
 - **Website content（网站内容）**：在用户开启的网站上读取帖子正文、作者名、头像和图片 / 视频地址，用来显示预览。帖子内容留在当前页面内存里，不发给开发者，也不另存。显示图片时，浏览器仍会向图床请求该地址。
 - **User activity（用户活动）**：读取鼠标位置和点击，判断停在哪张图上。只在本机使用。
+- **Personally identifiable information（个人身份信息）**：勾选。卡片读取并显示帖子作者的名字和头像。不读取用户本人的邮箱、住址或证件号。Chrome 的用户数据 FAQ 把人名和用户名列为个人身份信息，所以和「网站内容」一起勾。
+- **Personal communications（个人通讯）**：勾选。私信、通知、账号、设置、支付只按网址路径和接口名称跳过；看图仍会读取当前页上的图片，名单对不上的内容也不在跳过范围内。不要写成「整页不读取」，也不要据此不勾。
 
-下面几项里，个人通讯不要按「整页不读取」直接不勾。其余项目前的实现理由如下，提交时仍要对照后台每一项的定义再确认一遍：
+不勾选：
 
-- **Web history（网络记录）**：不保存访问过的网页列表。存下的只有你自己开启的网站域名（设置），当前标签页网址只在打开设置时读取、不保存。
-- **Personally identifiable information（个人身份信息）**：不读取用户本人的姓名、邮箱、地址等。卡片里显示的是帖子作者的公开名称和头像，已归入「网站内容」。
-- **Personal communications（个人通讯）**：不要写成「私信页面整页不读取」。实现是按网址路径和接口名称跳过能对上的私信、通知、账号、设置、支付请求；看图仍会读取当前页上的图片。名单对不上的页面不在跳过范围内。对照后台定义自行决定是否勾选，不能靠「整个跳过」当作不勾的理由。
-- **Authentication（身份验证）**：不读取密码、Cookie 或登录信息。微博长帖全文请求由浏览器按微博自己的登录状态发出，插件看不到这些凭据。
-- 健康、财务和付款、位置：完全不涉及。
+- **Authentication（身份验证信息）**：不勾。不读取密码、Cookie 或登录信息。微博长文由浏览器附上已有会话发出，插件看不到这些凭据。不要把浏览器自动附带的 Cookie 当成凭据收集。
+- **Location（位置）**：不勾。不读取 IP、地区或 GPS。图床或微博在普通请求里看到的 IP，不作为位置信息申报。
+- **Health information（健康信息）**、**Financial and payment information（财务和付款信息）**：不勾。没有读取这些内容。
 
-然后勾选下面三条声明：
-- 不出售或转让用户数据给第三方
-- 不把用户数据用于与单一用途无关的目的
-- 不把用户数据用于判断信用或放贷
+**Web history（网络记录）**：先打开后台这一项的具体定义，再决定勾不勾。不要直接写成不选。实现是：不保存访问过的网页列表，也没有标题或访问时间；打开设置时读取当前标签页网址，并且不保存；启用的网站域名存在本机设置里。若定义只指访问记录列表，可以不选；若定义包括读取当前网址，则应勾选。
 
-**Privacy policy URL（必填）**：`https://jooosephlee.github.io/zizai/privacy.html`。这个页面由 `scripts/build-privacy.py` 从 PRIVACY.md 生成。仓库已经公开，但 Pages 还没打开，这个地址现在打不开。提交审核前要先按上面的 Pages 设置打开，并在浏览器里确认这一页能打开。没有商店商品 ID，不要提前写进任何链接。
+然后对照后台原文勾选这三项。语义来自 Limited Use 政策，不是 Google API 承诺：
+
+- 不向第三方出售用户数据。向图床取图、向微博取长文，只为显示图片或全文。
+- 不把用户数据用于与看图这个单一用途无关的目的。
+- 不把用户数据用于信用评估或放贷。
+
+**Privacy policy URL（必填）**：`https://jooosephlee.github.io/zizai/privacy.html`。页面由 `scripts/build-privacy.py` 从 PRIVACY.md 生成。2026-11-20 实测首页和这一页都是 HTTP 200。本段修改合并到 `main` 之后，再打开这一页确认能看到 Limited Use 陈述，然后再提交审核。草稿商品 ID 不要写成已上架，也不要放进官网或下载链接。
 
 ---
 
@@ -152,5 +155,5 @@ Viewing pictures on sites the user turns on: when the mouse rests on a picture o
 ## 五、提交前要你确认的
 
 - 开发者账号的「发布者名称」用什么（会公开显示在商店里）。用这个项目自己的身份，不用个人主账号的名字或邮箱。
-- 欧盟「交易者 / 非交易者」声明：要按你自己的情况判断（是否以经营为目的）。不以营利为目的的个人开源项目通常属于非交易者，但这不是由「免费开源」自动决定的。
+- 欧盟「交易者 / 非交易者」声明：用户已确认填非交易者。
 - 审核时间：安装时只申请固定的几个网站，审核一般比申请所有网站快；首次提交仍可能需要几天。
