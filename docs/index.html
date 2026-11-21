@@ -73,7 +73,7 @@ h3 { font-size: 22px; line-height: 1.3; letter-spacing: -.02em; }
 .btn.primary { background: var(--primary); color: var(--primary-ink); border-color: transparent; }
 .link { color: var(--amber-ink); text-decoration: none; font-size: 17px; }
 .link:hover { text-decoration: underline; }
-/* Chrome Web Store: "not listed yet" until STORE_URL is a real listing. */
+/* Chrome Web Store listing. The primary install buttons use this style. */
 .store { display: inline-flex; align-items: center; gap: 8px; border-radius: 100px; padding: 11px 18px; font-size: 15px; border: 1px dashed var(--line); color: var(--muted); text-decoration: none; }
 .store svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 a.store { border-style: solid; color: var(--ink); }
@@ -521,8 +521,7 @@ html:lang(zh-CN) :is(h1, h2, h3, p, li, figcaption) { word-break: keep-all; over
       <h1 data-i="h1">鼠标一停，精彩就来。</h1>
       <p class="body" data-i="lead">刷到好图，不用点开。大图直接铺开，作者和正文就在旁边。看完随手一点，接着刷。</p>
       <div class="cta">
-        <a class="btn primary" href="#install" data-i="ctaInstall">免费安装</a>
-        <span class="store-slot"></span>
+        <a class="btn primary store-main" href="https://chromewebstore.google.com/detail/zizai/gicgnhlpofjobdoloefejjeaicijcbie?hl=zh-CN" data-i="ctaInstall">在 Chrome 应用商店安装</a>
       </div>
       <p class="small" data-i="meta">Chrome、Edge、Arc 都能用</p>
 
@@ -767,18 +766,17 @@ html:lang(zh-CN) :is(h1, h2, h3, p, li, figcaption) { word-break: keep-all; over
   <section class="sec soft" id="install">
     <div class="wrap">
       <p class="eyebrow" data-i="eInst">安装</p>
-      <h2 data-i="iTitle">三步装好。</h2>
-      <p class="body" data-i="iNote">还没上架 Chrome 应用商店，审核通过之前这里不会放商店链接。现在可以先手动装。</p>
+      <h2 data-i="iTitle">从应用商店安装。</h2>
+      <p class="body" data-i="iNote">1.1.0 已在 Chrome 应用商店上架。</p>
       <ol class="steps">
-        <li><b>1</b><span data-i="i1">在 GitHub 下载仓库压缩包（没有 Release），解压。</span></li>
-        <li><b>2</b><span><span data-i="i2a">在地址栏输入</span> <code>chrome://extensions</code><span data-i="i2b">，回车。右上角有个⁠「开发者模式」，把它打开。</span></span></li>
-        <li><b>3</b><span data-i="i3">点⁠「加载已解压的扩展程序」，选解压后的 extension 文件夹（里面有 manifest.json）。装好后，刷新一下网页。</span></li>
+        <li><b>1</b><span data-i="i1">打开下面的 Chrome 应用商店页面。</span></li>
+        <li><b>2</b><span data-i="i2">点「添加至 Chrome」。</span></li>
+        <li><b>3</b><span data-i="i3">装好后，刷新要看图的网页。</span></li>
       </ol>
       <div class="cta">
-        <a class="btn primary repo-release" href="https://github.com/Jooosephlee/zizai/archive/refs/heads/main.zip" data-i="iGo">下载仓库压缩包</a>
-        <span class="store-slot"></span>
+        <a class="btn primary store-main" href="https://chromewebstore.google.com/detail/zizai/gicgnhlpofjobdoloefejjeaicijcbie?hl=zh-CN" data-i="iGo">在 Chrome 应用商店安装</a>
       </div>
-      <p class="small"><a class="link repo-log" href="https://github.com/Jooosephlee/zizai/blob/main/CHANGELOG.md" style="font-size:13px"><span data-i="iLog">更新记录</span> ›</a></p>
+      <p class="small"><a class="link repo-release" href="https://github.com/Jooosephlee/zizai/archive/refs/heads/main.zip"><span data-i="iSrc">从 GitHub 下载源码</span></a> · <a class="link repo-log" href="https://github.com/Jooosephlee/zizai/blob/main/CHANGELOG.md" style="font-size:13px"><span data-i="iLog">更新记录</span> ›</a></p>
       <p class="small" data-i="iSmall">Chrome、Edge、Arc 都能用，版本 123 以上。</p>
     </div>
   </section>
@@ -798,8 +796,9 @@ html:lang(zh-CN) :is(h1, h2, h3, p, li, figcaption) { word-break: keep-all; over
 (() => {
   // GitHub 仓库地址只在这里改一处。
   const REPO = "https://github.com/Jooosephlee/zizai";
-  // 审核通过并有了真实商品地址之后再填。留空时按钮只显示「尚未上架」，不是链接。
-  const STORE_URL = "";
+  // Chrome 应用商店商品 ID 固定。中文 hl=zh-CN，英文 hl=en。
+  const STORE_ITEM = "gicgnhlpofjobdoloefejjeaicijcbie";
+  const storeUrl = () => "https://chromewebstore.google.com/detail/zizai/" + STORE_ITEM + "?hl=" + (lang === "en" ? "en" : "zh-CN");
 
   for (const a of document.querySelectorAll("a.repo")) a.href = REPO;
   for (const a of document.querySelectorAll("a.repo-log")) a.href = REPO + "/blob/main/CHANGELOG.md";
@@ -828,7 +827,7 @@ html:lang(zh-CN) :is(h1, h2, h3, p, li, figcaption) { word-break: keep-all; over
     kicker: "Open source · Free · Browser extension",
     h1: "Just pause.\nIt comes to you.",
     lead: "Spot a great picture? No need to click it open. It fills the screen, with the post right beside it. One click and you're back to scrolling.",
-    ctaInstall: "Install free", meta: "Works in Chrome, Edge and Arc",
+    ctaInstall: "Get it on the Chrome Web Store", meta: "Works in Chrome, Edge and Arc",
     demoLabel: "Interactive demo", howHover: "Example page",
     tipHover: "Your turn: rest your mouse on a picture",
     fullLabel: "Full view", closeLabel: "Close",
@@ -869,12 +868,12 @@ html:lang(zh-CN) :is(h1, h2, h3, p, li, figcaption) { word-break: keep-all; over
     prLink: "Read the code on GitHub", prSmall: "MIT License",
     sTitle: "Ready on these sites.", sMore: "On any other site, click the toolbar icon, turn it on and allow access.",
     sNote: "Names belong to their owners. Zizai is an independent open-source project and is not affiliated with these sites.",
-    iTitle: "Install in three steps.", iNote: "Not in the Chrome Web Store yet, so there is no store link until a review is approved. For now, install it by hand.",
-    i1: "Download the repository zip from GitHub (there is no Release) and unzip it.", i2a: "Type", i2b: " in the address bar and press Enter. Turn on Developer mode in the top-right corner.",
-    i3: "Click Load unpacked and choose the extension folder inside (the one with manifest.json). Then reload your page.",
-    iGo: "Download the repository zip", iLog: "Changelog", iSmall: "Works in Chrome, Edge and Arc, version 123 or later.",
+    iTitle: "Install from the Chrome Web Store.", iNote: "Version 1.1.0 is in the Chrome Web Store.",
+    i1: "Open the Chrome Web Store page below.",
+    i2: "Click Add to Chrome.",
+    i3: "After it installs, reload the page you want to view.",
+    iGo: "Get it on the Chrome Web Store", iSrc: "Download the source on GitHub", iLog: "Changelog", iSmall: "Works in Chrome, Edge and Arc, version 123 or later.",
     fLicense: "MIT License", fPrivacy: "Privacy policy", fPhotos: "Demo photos from Unsplash: ",
-    storeSoon: "Chrome Web Store · not listed yet", storeGo: "Get it on the Chrome Web Store",
     // Shared with the demo posts
     aName: "Wild Notes", bName: "Lakeside", bTime: "1h", bBody: "The lake is this shade of green in the morning, and the cabin stands right on the water.",
     cName: "Kyoto by Night"
@@ -902,7 +901,7 @@ html:lang(zh-CN) :is(h1, h2, h3, p, li, figcaption) { word-break: keep-all; over
     [{ n: "kyoto", r: 2000 / 1334 }, { n: "lanterns", r: 2000 / 1336 }]
   ];
 
-  const zh = { replay: "重播", playDemo: "播放演示", vSound: "声音已打开", vMuted: "点一下开声音", storeSoon: "Chrome 应用商店 · 尚未上架", storeGo: "在 Chrome 应用商店安装" };
+  const zh = { replay: "重播", playDemo: "播放演示", vSound: "声音已打开", vMuted: "点一下开声音" };
   for (const node of document.querySelectorAll("[data-i]")) zh[node.dataset.i] ??= node.textContent;
   for (const node of document.querySelectorAll("[data-i-aria]")) zh[node.dataset.iAria] ??= node.getAttribute("aria-label");
   let lang = "zh";
@@ -1516,14 +1515,9 @@ html:lang(zh-CN) :is(h1, h2, h3, p, li, figcaption) { word-break: keep-all; over
     $("creopen").hidden = false;
   }, { threshold: .6, delay: 200, replay: false });
 
-  // ---- Store button: not a link until a real listing URL exists ----
   function renderStore() {
-    const bag = '<svg viewBox="0 0 24 24"><path d="M5 8h14l-1 12H6zM9 8V6a3 3 0 0 1 6 0v2"/></svg>';
-    for (const slot of document.querySelectorAll(".store-slot")) {
-      slot.innerHTML = STORE_URL
-        ? `<a class="store" href="${STORE_URL}">${bag}<span>${t("storeGo")}</span></a>`
-        : `<span class="store" aria-disabled="true">${bag}<span>${t("storeSoon")}</span></span>`;
-    }
+    const url = storeUrl();
+    for (const link of document.querySelectorAll("a.store-main")) link.href = url;
   }
 
   // Wrap a full-width mark that ends a headline's line so it can hang.
