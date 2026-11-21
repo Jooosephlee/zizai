@@ -1,6 +1,8 @@
 .DS_Store
 # Built for the store upload; rebuild with scripts/pack-store.sh
 store/*.zip
-# Notes exchanged with the privacy reviewer; kept out of the public repository
-store/隐私复核回复-*.md
+# Internal store worksheets and review notes stay out of the public tree.
+store/listing.md
+store/*复核*.md
+store/*审核*.md
 node_modules/

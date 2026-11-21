@@ -776,7 +776,7 @@ html:lang(zh-CN) :is(h1, h2, h3, p, li, figcaption) { word-break: keep-all; over
       <div class="cta">
         <a class="btn primary store-main" href="https://chromewebstore.google.com/detail/zizai/gicgnhlpofjobdoloefejjeaicijcbie?hl=zh-CN" data-i="iGo">在 Chrome 应用商店安装</a>
       </div>
-      <p class="small"><a class="link repo-release" href="https://github.com/Jooosephlee/zizai/archive/refs/heads/main.zip"><span data-i="iSrc">从 GitHub 下载源码</span></a> · <a class="link repo-log" href="https://github.com/Jooosephlee/zizai/blob/main/CHANGELOG.md" style="font-size:13px"><span data-i="iLog">更新记录</span> ›</a></p>
+      <p class="small"><a class="repo" href="https://github.com/Jooosephlee/zizai"><span data-i="iSrc">在 GitHub 上看源码</span></a> · <a class="link repo-log" href="https://github.com/Jooosephlee/zizai/blob/main/CHANGELOG.md" style="font-size:13px"><span data-i="iLog">更新记录</span> ›</a></p>
       <p class="small" data-i="iSmall">Chrome、Edge、Arc 都能用，版本 123 以上。</p>
     </div>
   </section>
@@ -802,7 +802,6 @@ html:lang(zh-CN) :is(h1, h2, h3, p, li, figcaption) { word-break: keep-all; over
 
   for (const a of document.querySelectorAll("a.repo")) a.href = REPO;
   for (const a of document.querySelectorAll("a.repo-log")) a.href = REPO + "/blob/main/CHANGELOG.md";
-  for (const a of document.querySelectorAll("a.repo-release")) a.href = REPO + "/archive/refs/heads/main.zip";
 
   const compare = document.getElementById("compare");
   compare.querySelector("input").addEventListener("input", event => compare.style.setProperty("--cut", event.target.value + "%"));
@@ -872,7 +871,7 @@ html:lang(zh-CN) :is(h1, h2, h3, p, li, figcaption) { word-break: keep-all; over
     i1: "Open the Chrome Web Store page below.",
     i2: "Click Add to Chrome.",
     i3: "After it installs, reload the page you want to view.",
-    iGo: "Get it on the Chrome Web Store", iSrc: "Download the source on GitHub", iLog: "Changelog", iSmall: "Works in Chrome, Edge and Arc, version 123 or later.",
+    iGo: "Get it on the Chrome Web Store", iSrc: "View the source on GitHub", iLog: "Changelog", iSmall: "Works in Chrome, Edge and Arc, version 123 or later.",
     fLicense: "MIT License", fPrivacy: "Privacy policy", fPhotos: "Demo photos from Unsplash: ",
     // Shared with the demo posts
     aName: "Wild Notes", bName: "Lakeside", bTime: "1h", bBody: "The lake is this shade of green in the morning, and the cabin stands right on the water.",

@@ -26,8 +26,9 @@ test("the site links both languages to the published Chrome Web Store item", () 
   assert.equal(html.includes(">在 Chrome 应用商店安装</a>"), true);
   assert.equal(html.includes("1.1.0 已在 Chrome 应用商店上架。"), true);
   assert.equal(html.includes('href="https://github.com/Jooosephlee/zizai"'), true);
-  assert.equal(html.includes("从 GitHub 下载源码"), true);
-  assert.equal(html.includes('iSrc: "Download the source on GitHub"'), true);
+  assert.equal(html.includes("在 GitHub 上看源码"), true);
+  assert.equal(html.includes('iSrc: "View the source on GitHub"'), true);
+  assert.equal(html.includes("archive/refs/heads/main.zip"), false);
   assert.equal(html.includes("extension/"), false);
 });
 
@@ -108,8 +109,8 @@ test("both languages show the store buttons in a browser", { skip: !chromium, ti
   assert.equal(zh.note, "1.1.0 已在 Chrome 应用商店上架。");
   assert.equal(zh.title, "从应用商店安装。");
   assert.deepEqual(zh.steps, ["打开下面的 Chrome 应用商店页面。", "点「添加至 Chrome」。", "装好后，刷新要看图的网页。"]);
-  assert.equal(zh.src, "从 GitHub 下载源码");
-  assert.equal(zh.srcHref, "https://github.com/Jooosephlee/zizai/archive/refs/heads/main.zip");
+  assert.equal(zh.src, "在 GitHub 上看源码");
+  assert.equal(zh.srcHref, "https://github.com/Jooosephlee/zizai");
   assert.equal(zh.github, "https://github.com/Jooosephlee/zizai");
   assert.equal(zh.listed, true);
 
@@ -124,7 +125,7 @@ test("both languages show the store buttons in a browser", { skip: !chromium, ti
   assert.equal(en.note, "Version 1.1.0 is in the Chrome Web Store.");
   assert.equal(en.title, "Install from the Chrome Web Store.");
   assert.deepEqual(en.steps, ["Open the Chrome Web Store page below.", "Click Add to Chrome.", "After it installs, reload the page you want to view."]);
-  assert.equal(en.src, "Download the source on GitHub");
+  assert.equal(en.src, "View the source on GitHub");
   assert.equal(en.srcHref, zh.srcHref);
   assert.equal(en.github, zh.github);
   assert.equal(en.listed, true);
