@@ -1,6 +1,6 @@
 # 隐私政策 · Privacy Policy
 
-生效日期：2026 年 11 月 20 日 · Effective 20 November 2026
+生效日期：2026 年 11 月 23 日 · Effective 23 November 2026
 
 [中文](#中文) · [English](#english)
 
@@ -13,7 +13,7 @@
 只在你开启了看图的网站上，为了放大图片、显示帖子：
 
 - **鼠标位置和点击**：判断你停在哪张图上、点了哪个按钮。
-- **页面上的图片、视频地址，帖子的正文、作者名和头像**：从网页本身读取；在微博、即刻、X、Instagram 上，也从网页自己已经收到的数据里读取。帖子缓存只保留带图片或视频的帖子。读取这些已经收到的数据时，会按网址路径和接口名称跳过能对上的私信、通知、账号、设置、支付相关请求；当前页路径也对得上时，不再把新的响应写进缓存。这是一份名称名单，不是「私密页面整页不读取」：看图仍会读取页面上的图片来放大，名单对不上的地址不在跳过范围内，已经留在内存里的内容也不会因为后来打开这类页面就自动清掉。
+- **页面上的图片、视频地址，帖子的正文、作者名和头像**：从网页本身读取；在微博、即刻、X、Instagram、小红书（xiaohongshu.com）和 Rednote（rednote.com）上，也从网页自己已经收到的数据里读取。小红书和 Rednote 读的是页面已经收到的笔记：首页、搜索、个人页、收藏、点赞，以及已经打开的笔记，留下图片、视频地址、标题、正文、作者名和头像。帖子缓存只保留带图片或视频的帖子。读取这些已经收到的数据时，会按网址路径和接口名称跳过能对上的私信、通知、账号、设置、支付相关请求；当前页路径也对得上时，不再把新的响应写进缓存。这是一份名称名单，不是「私密页面整页不读取」：看图仍会读取页面上的图片来放大，名单对不上的地址不在跳过范围内，已经留在内存里的内容也不会因为后来打开这类页面就自动清掉。
 - **当前标签页的网址**：你打开工具栏上的设置时，用来显示和切换这个网站。
 
 这些内容只放在当前页面的内存里，用来显示预览。关掉看图或关掉这个网站的开关，当前页面立刻停止读取并清掉已读的内容，之后才到的数据也会丢弃；重新打开后，从下一次打开页面起才恢复。关掉页面，内容也随之消失。插件不把这些内容写进自己的硬盘存储，也不发给开发者。显示图片、视频时，浏览器仍会按下一节所说，向网站或图床请求文件。
@@ -22,6 +22,10 @@
 
 - 显示大图、视频、头像时，浏览器会按网页给出的地址（https 或 http）向图片所在的网站或它的图片服务器请求这些文件，和你自己点开时一样。对方会按惯例看到你的 IP 地址和请求的文件地址。
 - 在微博上看长帖时，插件会向微博请求这条帖子的全文，带着你在微博的登录状态，和你点「展开」一样。
+- 在小红书或 Rednote 上，一张信息流卡片只显示封面时，插件会向你当前打开的这个网站请求该笔记自己的页面，每条只请求一次，并带上你在这个网站已有的登录状态，和你打开这条笔记一样。请求在下面任一时刻发出：指针在这张卡片上连续停留达到「停留多久打开」的一半、且不超过 160 毫秒（快约 75 毫秒，中和慢约 160 毫秒）；或者看图已经打开，而这条笔记当时仍只有封面（浮窗和全页都一样）。指针短暂经过、停留还没达到这个时间，就不会因此发出。停留过程中指针离开，会取消尚未发出的这次请求。已经发往网站的请求无法收回。
+- 这次请求包含笔记编号。页面数据里若已有 xsec_token，请求里也会带上它。笔记编号和 xsec_token 只发送给当前这个网站，只留在当前页面的内存中，不写入扩展存储，也不发送给开发者。
+- 响应是笔记页的 HTML。插件只提取这一条笔记的图片、视频地址、标题、正文、作者名和头像，留在当前页面内存里用于显示，不保存页面中的其余内容。
+- 全页查看一组图片时，当前图片显示出来之后，浏览器会再请求下一张图片的文件，优先级较低，一次只取一张。下一张若是视频或实况图，不会提前请求，要播放时才获取。图片服务器看到的仍是你的 IP 地址和该文件地址。
 - 复制或保存图片时，插件下载这张图片，不带 Cookie。若主机名落在一份固定的本机或局域网字面名单里（localhost，以 .local、.localhost、.internal、.lan、.home.arpa 结尾，以及 0.、10.、127.、169.254.、192.168.、172.16–31.、::1、fc00::/7、fe80::），并且和当前网页不是同一主机，这次下载会拒绝；跳转之后的主机名也按同一名单看。这不是「绝不请求私网」：普通域名即使指向内网也不会被拦住，当前网页自己就开在那台主机上时，同一主机的图片仍会下载。有的图床只接受来自自己网站的请求，插件会在这次下载期间，对发往这个图片服务器（同一域名）的请求临时附上当前网站的域名（不含具体页面地址）。下载一次只进行一张，结束后先确认撤掉再开始下一张；撤不掉就不再下载。
 
 插件不读取、不导出你的 Cookie 或登录信息。
@@ -35,7 +39,7 @@
 
 没有账号，没有统计，没有广告。不出售数据，也不把数据用在看图以外的地方。
 
-本插件对用户数据的使用符合 Chrome 应用商店用户数据政策中的 Limited Use 要求：这些数据只用于在你开启的网站上放大图片和显示帖子；不出售；不用于广告、信用评估或放贷；开发者不接收这些数据。为显示图片而向图床请求文件，以及为显示微博长文而向微博请求全文，是这个用途所必需的。政策原文：https://developer.chrome.com/docs/webstore/program-policies/limited-use
+本插件对用户数据的使用符合 Chrome 应用商店用户数据政策中的 Limited Use 要求：这些数据只用于在你开启的网站上放大图片和显示帖子；不出售；不用于广告、信用评估或放贷；开发者不接收这些数据。为显示图片而向图床请求文件（含全页一组图里提前请求下一张图片文件，不提前请求视频或实况图），为显示微博长文而向微博请求全文，以及为显示小红书或 Rednote 上只露出封面的笔记而向当前网站请求该笔记页面，是这个用途所必需的。政策原文：https://developer.chrome.com/docs/webstore/program-policies/limited-use
 
 ### 网站权限
 
@@ -54,7 +58,7 @@ Zizai is a browser extension that works only inside your browser. The developer 
 Only on sites where you have turned previews on, to enlarge pictures and show posts:
 
 - **Mouse position and clicks**: to tell which picture you are resting on and which button you pressed.
-- **Picture and video addresses, and a post's text, author name and avatar**: read from the page itself and, on Weibo, Jike, X and Instagram, from data the page has already received. The post cache keeps only posts with pictures or videos. When reading data the page has already received, requests whose address or query name matches messages, notifications, account, settings or payments are skipped, and a matching page path stops new responses from being cached. That is a name list, not a promise that a private page is never read: previews still read pictures on the page in order to enlarge them, addresses that do not match the list are outside it, and anything already in memory is not cleared just because a matching page opens later.
+- **Picture and video addresses, and a post's text, author name and avatar**: read from the page itself and, on Weibo, Jike, X, Instagram, Xiaohongshu (xiaohongshu.com) and Rednote (rednote.com), from data the page has already received. On Xiaohongshu and Rednote that is note data the page has already received — the feed, search, a profile, collects, likes, and a note already open — keeping picture and video addresses, the title, the text, and the author's name and avatar. The post cache keeps only posts with pictures or videos. When reading data the page has already received, requests whose address or query name matches messages, notifications, account, settings or payments are skipped, and a matching page path stops new responses from being cached. That is a name list, not a promise that a private page is never read: previews still read pictures on the page in order to enlarge them, addresses that do not match the list are outside it, and anything already in memory is not cleared just because a matching page opens later.
 - **The current tab's address**: when you open the toolbar settings, to show and switch previews for that site.
 
 This stays in the current page's memory to show the preview. Turning previews off, or turning the site off, stops the reading on the current page at once and clears what was read; data arriving later is dropped. Turning it back on takes effect from the next page load. Closing the page clears it too. The extension does not write this into its own disk storage and does not send it to the developer. Showing a picture or video still makes the browser request the file from the site or its image host, as the next section describes.
@@ -63,6 +67,10 @@ This stays in the current page's memory to show the preview. Turning previews of
 
 - To show pictures, videos and avatars, your browser requests those files (over https or http, as the page gives them) from the site or its image servers, just as when you open them yourself. Those servers see your IP address and the file address, as usual.
 - For a long post on Weibo, the extension asks Weibo for the post's full text, with your Weibo session, just as clicking "展开" (expand) does.
+- On Xiaohongshu or Rednote, when a feed card shows only its cover, the extension requests that note's own page from the site you currently have open, once per note, with the login session you already have on that site, just as opening the note would. The request is sent at either of these moments: the pointer has rested continuously on that card for half of "Open after resting", and no longer than 160 milliseconds (about 75 ms on Quick, about 160 ms on Medium and Slow); or the viewer is already open while that note is still only a cover (both the floating view and the full page). A brief pass that never reaches this wait does not send the request on account of that pass. Moving the pointer away during the wait cancels the request that has not been sent yet. A request already sent to the site cannot be taken back.
+- That request includes the note id. If the page data already included an xsec_token, the request includes it too. The note id and the xsec_token are sent only to the current site, kept only in the current page's memory, not written to extension storage, and not sent to the developer.
+- The response is the note page's HTML. The extension extracts only this note's pictures, video addresses, title, text, author name and avatar, and keeps those in the current page's memory to show the preview. It does not keep the rest of the page.
+- In a full-page gallery, after the current picture is shown, the browser requests the next picture's file, at low priority, one at a time. If the next item is a video or a Live Photo, it is not requested ahead; it is requested when it plays. The image server still sees your IP address and that file's address.
 - To copy or save a picture, the extension downloads it without cookies. If the hostname is on a fixed list of literal local or private-network names (localhost, names ending in .local, .localhost, .internal, .lan or .home.arpa, and 0., 10., 127., 169.254., 192.168., 172.16–31., ::1, fc00::/7, fe80::) and it is not the same host as the current page, that download is refused. The hostname after a redirect is checked against the same list. This is not a promise that a private-network address is never requested: an ordinary domain name is not blocked even if it points at a private address, and a picture on the same host is still downloaded when the page itself is already open on that host. Some image servers only accept requests from their own site, so while that download runs, requests to that image server (same domain) carry the current site's domain (not the page address) as the source. Downloads run one at a time; the rule is confirmed removed before the next one starts, and if it cannot be removed, no further download runs.
 
 The extension never reads or exports your cookies or sign-in details.
@@ -76,7 +84,7 @@ The extension never reads or exports your cookies or sign-in details.
 
 No account, no analytics, no ads. It does not sell data, or use it for anything other than viewing pictures.
 
-This extension's use of user data complies with the Limited Use requirements in the Chrome Web Store User Data Policy. That data is used only to enlarge pictures and show posts on sites you turn on. It is not sold, it is not used for advertising, credit assessment, or lending, and the developer does not receive it. Requesting a file from an image host in order to show the picture, and requesting a long Weibo post's full text from Weibo, are necessary for that use. Policy text: https://developer.chrome.com/docs/webstore/program-policies/limited-use
+This extension's use of user data complies with the Limited Use requirements in the Chrome Web Store User Data Policy. That data is used only to enlarge pictures and show posts on sites you turn on. It is not sold, it is not used for advertising, credit assessment, or lending, and the developer does not receive it. Requesting a file from an image host in order to show the picture (including requesting the next picture's file ahead in a full-page gallery, and not requesting a video or Live Photo ahead), requesting a long Weibo post's full text from Weibo, and requesting a Xiaohongshu or Rednote note's page from the current site when a feed card shows only its cover, are necessary for that use. Policy text: https://developer.chrome.com/docs/webstore/program-policies/limited-use
 
 ### Site access
 
